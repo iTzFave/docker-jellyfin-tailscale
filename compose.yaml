@@ -32,11 +32,11 @@ services:
     volumes:
       - /home/mertensf/docker/jellyfin/jellyfin-config:/config
       - /home/mertensf/docker/jellyfin/jellyfin-cache:/cache
-      - ${DATA_LOCATION}:/media
+      - /home/mertensf/data/jellyfin-media:/media
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:
-      - TZ=${TIMEZONE}
+      - TZ=Europe/Berlin
       - JELLYFIN_PublishedServerUrl=http://example.com
       - /dev/dri:/dev/dri
 
