@@ -10,8 +10,8 @@ services:
       - TS_SERVE_CONFIG=/config/serve-config.json
       - TS_USERSPACE=false
     volumes:
-      - home/mertensf/docker/jellyfin/tailscale/state:/var/lib/tailscale
-      - home/mertensf/docker/jellyfin/tailscale/serveconfig:/config
+      - /home/mertensf/docker/jellyfin/tailscale/state:/var/lib/tailscale
+      - /home/mertensf/docker/jellyfin/tailscale/serveconfig:/config
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - net_admin
