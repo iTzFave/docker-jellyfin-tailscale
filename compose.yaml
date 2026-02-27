@@ -4,7 +4,7 @@ services:
     container_name: tailscale-jellyfin
     hostname: jellyfin    
     environment:
-      - TS_AUTHKEY=tskey-auth-kTEPi6r9vR11CNTRL-5sJnsSyeXn1ZoJoy25eLn1d68KvyitaCg
+      - TS_AUTHKEY=tskey-auth-kLoSXUGdzR11CNTRL-pqKh4aijc9beWEvS1Wt2AbcB8eMdTq4Uc
       - "TS_EXTRA_ARGS=--advertise-tags=tag:container-jellyfin --reset"
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_SERVE_CONFIG=/config/serve-config.json
