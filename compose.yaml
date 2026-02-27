@@ -25,7 +25,7 @@ services:
     user: 1000:1000
     network_mode: "service:tailscale-jellyfin"
     depends_on:
-      - tailscale
+      - tailscale-jellyfin
     # ports:
       # - 8096:8096/tcp
       # - 7359:7359/udp
