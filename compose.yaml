@@ -1,7 +1,7 @@
 services:
-  tailscale:
+  tailscale-jellyfin:
     image: tailscale/tailscale:latest
-    container_name: tailscale
+    container_name: tailscale-jellyfin
     hostname: jellyfin    
     environment:
       - TS_AUTHKEY=tskey-client-kNbze6GQoj11CNTRL-qmn6LZMq7tC5mnds46NctCCzSbFZ9gGp6?ephemeral=false
@@ -23,7 +23,7 @@ services:
     container_name: jellyfin
     # Optional - specify the uid and gid you would like Jellyfin to use instead of root
     user: 1000:1000
-    network_mode: "service:tailscale"
+    network_mode: "service:tailscale-jellyfin"
     depends_on:
       - tailscale
     # ports:
